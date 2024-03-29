@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>My first three.js app</title>
+		<style>
+			body { margin: 0; }
+			#health-bar-container {
+				font-family: 'Open Sans', sans-serif;
+				font-size: 16pt;
+				text-align: center;
+				position: absolute;
+				bottom: 97%;
+				left: 1%;
+				min-width: 80px;
+				border-radius: 18px;
+				z-index: 1;
+			}
+
+			#arms-bar-container {
+				position: absolute;
+				bottom: 3%;
+				left: 46%;
+				display: flex;
+				justify-content: space-around;
+			}
+			.instrument-button {
+				padding: 0;
+				border: 10px solid transparent;
+				background-color: transparent;
+				cursor: pointer;
+			}
+
+			.instrument-button:hover {
+				background-color: #bbb;
+			}
+			#remaining{
+				position: absolute;
+				bottom: 93%;
+				left: 1%;
+				font-family: 'Open Sans', sans-serif;
+				font-size: 16pt;
+				text-align: center;
+				min-width: 80px;
+				border-radius: 18px;
+				z-index: 1;
+			}
+		</style>
+	</head>
+	<body bgcolor = "black">
+		<div id="health-bar-container" style="width: 200px; height: 20px; border: 1px solid black;">
+			<div id="health-bar" style="height: 100%; width: 50%; background-color: green;"></div>
+		</div>
+		<div id="arms-bar-container">
+			<button class="instrument-button" id="portalButt"><img src="icons/portal.png" width="60px"></button>
+			<button class="instrument-button" id="swordButt"><img src="icons/sword-slice.png" width="60px">	</button>
+			<button class="instrument-button" id="weightButt"><img src="icons/weight.png" width="60px"></button>
+		</div>
+		<div id="remaining"></div>
+		<script type="module" src="js/main.js"></script>
+	</body>
+</html>
